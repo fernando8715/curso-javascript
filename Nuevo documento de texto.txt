@@ -1,0 +1,137 @@
+//comprobando que JavaScript NO es asincrono
+
+function imprimir(){
+
+	for(var i=0; i<8000; i++){
+		console.log("imprimio");
+	}
+}
+
+
+function PresionoClick(){
+
+	console.log("Click en boton");
+}
+
+
+imprimir();
+
+
+-------------------------------------------------------------------------------------------------------
+
+//Escritura dinamica
+
+var num = 10;
+var str = "Fernando";
+var bool = true;
+var und = undefined;
+var nul= null;
+
+var obj = {
+	numero: 10,
+	texto: "Allie",
+
+	obj2: {
+		numero2: 20,
+		texto2: "Nuevo texto"
+	} 
+
+};
+
+
+
+___________________________________________________________-
+
+
+// por valor y por referencia
+
+
+/*Las variables primitivas siempre se pasan por valor, 
+cada variable va a tener un espacio de memoria diferente */
+
+var a = 10;
+var b = a;
+
+console.log("a: ", a);
+console.log("b: ", b);
+
+a = 20;
+
+console.log("a:", a);	// imprime 20
+console.log("b:", b);   // imprime 10
+
+
+/* Los datos de los objetos siempre se van a pasar por referencia, como si
+estuviera anclado un valor, eso es lo que se llama pasar valores por referencia.
+quiere decir que apunta al mismo espacio de memoria
+*/
+
+var c = {
+	nombre: "Pedro"
+};
+
+var d = c;
+
+
+console.log("c: ", c);
+console.log("d: ", d);
+
+//para cambiar el nombre de una propiedad de un objeto se utiliza la notacion de punto
+c.nombre = "Allie";
+
+console.log("c: ", c);
+console.log("d: ", d);
+
+
+_______________________________________________________________________-
+
+
+
+// notación de punto
+
+var persona = {
+
+	nombre: "Fernando",
+	apellido: "Ruiz",
+	edad: 34,
+
+	direccion:{
+		ciudad: "Pasto",
+		pais: "Colombia",
+
+		edificio: {
+			nombre: "Calatrava",
+			piso: "8vo"
+		}
+	}
+}
+
+
+console.log(persona.nombre);
+console.log(persona.direccion.ciudad);
+
+//forma de agregar una propiedad nueva al objeto
+
+persona.direccion.barrio = "Santa Barbara";
+
+console.log(persona.direccion);
+console.log(persona.direccion.barrio);
+
+/* cuando se utiliza constantemente una propiedad u objeto contenido 
+dentro de otro objeto y es muy larga la instrucción se puede utilizar
+una variable y pasarle la referencia de ese objeto */
+
+var edificio = persona.direccion.edificio;
+
+console.log(edificio);
+
+console.log(persona);
+
+______________________________________________________________________________________
+
+
+/* Notacion de Corchete [ ]   */
+
+var campo = "edad";
+
+console.log( persona[campo] );

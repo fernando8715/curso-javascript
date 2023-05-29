@@ -1,0 +1,13 @@
+{
+    "peliculas":{
+        "001":{
+            "nombre": "Avengers",
+            "FechaLanzamiento": "25/04/2019"
+        },
+        "002":{
+            "nombre": "Matriz Destination",
+            "FechaLanzamiento": "10/02/2022"
+        }
+
+    }
+}
